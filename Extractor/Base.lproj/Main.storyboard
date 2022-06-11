@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WKF-mi-Gvf">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ayA-Is-rrW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WKF-mi-Gvf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j8Z-Pu-UzO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eVk-rG-Hld" kind="relationship" relationship="rootViewController" id="yAl-fw-TgG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x9o-LR-jsg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="764" y="76.911544227886068"/>
+        </scene>
+        <!--Extractor-->
+        <scene sceneID="Xn6-o3-Ihm">
+            <objects>
+                <viewController id="eVk-rG-Hld" customClass="ViewController" customModule="Extractor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JdS-G2-Tww">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2oi-WW-8Xq">
+                                <rect key="frame" x="0.0" y="44" width="375" height="500"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zpq-bc-lGU">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Zpq-bc-lGU" secondAttribute="trailing" id="GZw-Ru-Oij"/>
+                                    <constraint firstItem="Zpq-bc-lGU" firstAttribute="leading" secondItem="2oi-WW-8Xq" secondAttribute="leading" id="Gp3-Kq-ZSF"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zpq-bc-lGU" secondAttribute="bottom" id="M69-qT-5hf"/>
+                                    <constraint firstItem="Zpq-bc-lGU" firstAttribute="top" secondItem="2oi-WW-8Xq" secondAttribute="top" id="zqL-Ay-z99"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oI0-fL-TxZ">
+                                <rect key="frame" x="71" y="592" width="93" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="64K-dk-Bx0"/>
+                                </constraints>
+                                <state key="normal" title="TAKE" image="gallery"/>
+                                <connections>
+                                    <action selector="libraryDidTouch:" destination="eVk-rG-Hld" eventType="touchUpInside" id="1ML-hl-d0M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mhl-d7-hpe">
+                                <rect key="frame" x="246" y="594" width="101" height="46"/>
+                                <state key="normal" title="TAKE" image="camera-icon"/>
+                                <connections>
+                                    <action selector="cameraDidTouch:" destination="eVk-rG-Hld" eventType="touchUpInside" id="rOI-d7-R25"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="v1F-sF-n59"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Mhl-d7-hpe" firstAttribute="top" secondItem="2oi-WW-8Xq" secondAttribute="bottom" constant="50" id="3Ex-LY-zQg"/>
+                            <constraint firstItem="v1F-sF-n59" firstAttribute="bottom" secondItem="Mhl-d7-hpe" secondAttribute="bottom" constant="27" id="5Wv-lV-mNJ"/>
+                            <constraint firstItem="oI0-fL-TxZ" firstAttribute="leading" secondItem="v1F-sF-n59" secondAttribute="leading" constant="71" id="NrW-TV-Xq0"/>
+                            <constraint firstItem="2oi-WW-8Xq" firstAttribute="top" secondItem="v1F-sF-n59" secondAttribute="top" id="O19-QP-LoH"/>
+                            <constraint firstItem="oI0-fL-TxZ" firstAttribute="baseline" secondItem="Mhl-d7-hpe" secondAttribute="baseline" id="Ve6-YY-GLl"/>
+                            <constraint firstItem="2oi-WW-8Xq" firstAttribute="leading" secondItem="JdS-G2-Tww" secondAttribute="leading" id="aIS-aX-jBs"/>
+                            <constraint firstAttribute="trailing" secondItem="Mhl-d7-hpe" secondAttribute="trailing" constant="28" id="rJE-Jx-ilK"/>
+                            <constraint firstItem="Mhl-d7-hpe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oI0-fL-TxZ" secondAttribute="trailing" constant="8" symbolic="YES" id="ra6-JD-PqV"/>
+                            <constraint firstAttribute="trailing" secondItem="2oi-WW-8Xq" secondAttribute="trailing" id="tSu-OH-ymY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Extractor" id="YNs-Ez-dai"/>
+                    <connections>
+                        <outlet property="cameraButton" destination="Mhl-d7-hpe" id="B9S-1U-mt2"/>
+                        <outlet property="imageView" destination="Zpq-bc-lGU" id="F0j-pi-b6u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gzy-FY-NS9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1847" y="77"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera-icon" width="58" height="46"/>
+        <image name="gallery" width="50" height="50"/>
+    </resources>
+</document>
